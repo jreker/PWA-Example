@@ -15,6 +15,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "webpack --config webpack.config.js --devtool source-map --colors --progress",
+    "start": "webpack-dev-server --host localhost --config webpack.config.js --devtool source-map --colors --progress",
     "start:dev": "webpack-dev-server --host localhost --config webpack.config.js --devtool source-map --colors --progress"
   },
   "keywords": [],
