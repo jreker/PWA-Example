@@ -57,3 +57,34 @@ self.addEventListener('fetch', function(event) {
         }
       }());
 });
+
+
+// ----------------- PART FOR PUSH EVENTS:
+
+//This event will handle the incoming push message
+self.addEventListener('push', function(event) {
+    console.log('Push Received.');
+    console.log(`Push had this data: "${event.data.text()}"`);
+  
+    console.log(event);
+    const title = 'PWA-Testwebsite';
+    const options = {
+      body: event.data.text(),
+      icon: 'images/icon.png',
+      badge: 'images/badge.png'
+    };
+  
+    event.waitUntil(self.registration.showNotification(title, options));
+  });
+
+
+//if a user clicks on a notification this event will be executed.
+self.addEventListener('notificationclick', function(event) {
+    console.log('Notification click Received.');
+  
+    event.notification.close();
+  
+    event.waitUntil(
+      clients.openWindow('http://localhost')
+    );
+});

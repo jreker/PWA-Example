@@ -1,4 +1,6 @@
 # Progressive Web App Example 
+# WebPush Example [Work in progress]
+
 ## Tech Stack:
 - Javascript/HTML
 - Bootstrap 4 / jQuery
@@ -9,6 +11,7 @@ The PWA things in this project are:
 - added manifest file
 - added service-worker
 - added registering of service worker
+- added web-push
 
 
 ## Build
