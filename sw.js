@@ -65,13 +65,15 @@ self.addEventListener('fetch', function(event) {
 self.addEventListener('push', function(event) {
     console.log('Push Received.');
     console.log(`Push had this data: "${event.data.text()}"`);
-  
-    console.log(event);
+    
+    const payload = JSON.parse(event.data.text());
+
     const title = 'PWA-Testwebsite';
     const options = {
-      body: event.data.text(),
+      body: payload.message,
+      data: payload,
       icon: 'images/icon.png',
-      badge: 'images/badge.png'
+      badge: 'images/badge.png',
     };
   
     event.waitUntil(self.registration.showNotification(title, options));
@@ -80,11 +82,11 @@ self.addEventListener('push', function(event) {
 
 //if a user clicks on a notification this event will be executed.
 self.addEventListener('notificationclick', function(event) {
-    console.log('Notification click Received.');
-  
+    console.log('Notification click Received.',event);
+    
     event.notification.close();
   
     event.waitUntil(
-      clients.openWindow('http://localhost')
+      clients.openWindow(event.notification.data.url) // custom data "url"
     );
 });

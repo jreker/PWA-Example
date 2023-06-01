@@ -6,7 +6,7 @@
     <title>PWA-Test</title>
     
     <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
   </head>
   <body>
 
@@ -19,13 +19,7 @@
             margin-left: auto;
             margin-right: auto;
           }
-          .pushBtn {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            margin-right: 10px;
-            margin-bottom: 10px;
-          }
+          
         </style>
     </header>
     <main>
@@ -34,14 +28,15 @@
         <p class="lead">This is a Progressive Web App Testwebsite with a cached service worker. This website is installable! Check it out.</p>
         <hr class="my-4">
         <p>If you want to learn more about PWAs just start searching in the internet or check out the link below on youtube from google:</p>
-        <a class="btn btn-primary btn-lg" href="https://www.youtube.com/user/ChromeDevelopers/playlists?view=50&sort=dd&shelf_id=21" role="button">Learn more about PWAs</a>
+        <button id="btnRequestAccess" class="btn btn-primary pushBtn" type="submit">Request Access</button>
+        <button id="btnSubscribe" class="btn btn-primary pushBtn" type="submit">Subscribe Push</button>
       </div>
     </main>
     <footer>
-        <button id="btnPush" class="btn btn-primary pushBtn" type="submit">Push</button>
+        
     </footer>
-    <script type="text/javascript" src="app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js
+    " crossorigin="anonymous"></script>
   </body>
 </html>

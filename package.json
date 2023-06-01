@@ -1,24 +1,23 @@
 {
-  "name": "pwa-test",
+  "name": "pwa-example",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "webpack-cli": "^3.3.6",
-    "webpack": "^4.39.1"
-  },
-  "devDependencies": {
-    "copy-webpack-plugin": "^5.0.4",
-    "html-webpack-plugin": "^3.2.0",
-    "webpack-dev-server": "^3.8.0"
-  },
+  "description": "PWA-Example",
+  "main": "js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dev": "webpack --config webpack.config.js --devtool source-map --colors --progress",
-    "start": "webpack-dev-server --host localhost --config webpack.config.js --devtool source-map --colors --progress",
-    "start:dev": "webpack-dev-server --host localhost --config webpack.config.js --devtool source-map --colors --progress"
+    "start":"browser-sync --server"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jreker/PWA-Example.git"
+  },
+  "author": "Johannes Reker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jreker/PWA-Example/issues"
+  },
+  "homepage": "https://github.com/jreker/PWA-Example#readme",
+  "devDependencies": {
+    "browser-sync": "^2.29.3"
+  }
 }
